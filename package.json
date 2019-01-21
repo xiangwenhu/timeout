@@ -1,0 +1,19 @@
+{
+    "name": "etimeout",
+    "version": "1.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xiangwenhu/timeout.git"
+    },
+    "author": "xiangwenhu",
+    "license": "MIT",
+    "devDependencies": {
+        "assert": "^1.4.1",
+        "mocha": "^5.2.0"
+    }
+}
