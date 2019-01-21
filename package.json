@@ -1,8 +1,13 @@
 {
     "name": "etimeout",
-    "version": "1.0.2",
-    "description": "",
+    "version": "1.0.5",
+    "description": "增强的setTimeout",
     "main": "index.js",
+    "types": "index.d.ts",
+    "files": [
+        "index.js",
+        "index.d.ts"
+    ],
     "scripts": {
         "test": "mocha test"
     },
