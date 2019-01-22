@@ -58,3 +58,4 @@ function timeout(interval, context) {
 }
 
 module.exports = timeout;
+module.exports.default = timeout;
