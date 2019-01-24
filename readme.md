@@ -19,6 +19,25 @@ timeout(5500).start(function() {
 });
 ```
 
+ts使用, 有智能提示
+```js
+import timeout =  require("etimeout");
+
+var t = timeout(1000);
+
+var context = { name: "哈哈" };
+t.setContext(context);
+t.start(function(next) {
+    console.log(Date.now(), this.name);
+    next();
+});
+
+timeout(5500).start(() => {
+    t.cancel();
+});
+
+```
+
 ## 方法
 
 ### start(fn)
