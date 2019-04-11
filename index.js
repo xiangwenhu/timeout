@@ -7,6 +7,7 @@ function Timeout(interval, context) {
   this.callback = null;
 }
 Timeout.prototype.cancel = function() {
+  this._isTiming = false;
   this.interval && clearTimeout(this.ticketId);
 };
 
@@ -14,6 +15,7 @@ Timeout.prototype.innerStart = function() {
   var that = this;
   var next = function() {
     that.next(function() {
+      this._isTiming = false;
       that.excute.apply(that, [next.bind(that)]);
     });
   };
@@ -30,6 +32,7 @@ Timeout.prototype.excute = function() {
 };
 
 Timeout.prototype.next = function(cb) {
+  this._isTiming = true
   this.ticketId = setTimeout(cb, this.interval);
 };
 
@@ -58,7 +61,7 @@ function timeout(interval, context) {
     },
     cancel: instance.cancel.bind(instance),
     continue: function() {
-      if (instance.hasCallback()) {
+      if (instance.hasCallback() && !instance._isTiming) {
         instance.innerStart.apply(instance);
       }
     },
