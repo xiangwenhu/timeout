@@ -8,6 +8,4 @@ interface Timeout {
 
 declare function timeout(interval: number, context?: any): Timeout;
 
-declare module "etimeout" {
-  export = timeout;
-}
+export = timeout;

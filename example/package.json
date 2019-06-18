@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "etimeout": "^1.0.63",
+    "ts-node": "^8.3.0"
+  }
+}

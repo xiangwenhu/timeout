@@ -19,9 +19,10 @@ timeout(5500).start(function() {
 });
 ```
 
-ts使用, 有智能提示
+ts使用, 有智能提示。   
+可能需要设置 tsconfig 的 `compilerOptions.esModuleInterop:true`   
 ```js
-import timeout =  require("etimeout");
+import timeout  from "etimeout";
 
 var t = timeout(1000);
 
